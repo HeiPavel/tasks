@@ -4,11 +4,6 @@ function primeFinder(n) {
     let check = true;
     let j = 2;
     for (let i = 2; i <= n; i++) {
-      /*for (let j = 2; j < n; j++) {
-        if (i > j && i % j === 0) {
-          check = false;
-        }
-      }*/
       while (check && j < n) {
         if (i > j && i % j === 0) {
           check = false;
@@ -24,4 +19,4 @@ function primeFinder(n) {
     return primeNumbers.length ? primeNumbers : 0;
   }
   
-  console.log(primeFinder(13));
+  console.log(primeFinder(20));
