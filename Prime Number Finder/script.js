@@ -4,13 +4,13 @@ function primeFinder(n) {
     let check = true;
     let j = 2;
     for (let i = 2; i <= n; i++) {
-      while (check && j < n) {
-        if (i > j && i % j === 0) {
+      while (check && j < i) {
+        if (i % j === 0) {
           check = false;
         }
         j++;
       }
-      if (check && i % 1 === 0) {
+      if (check) {
         primeNumbers.push(i);
       }
       check = true;
@@ -19,4 +19,4 @@ function primeFinder(n) {
     return primeNumbers.length ? primeNumbers : 0;
   }
   
-  console.log(primeFinder(20));
+  console.log(primeFinder(11));
